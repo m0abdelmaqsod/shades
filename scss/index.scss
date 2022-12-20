@@ -1,0 +1,2875 @@
+@use 'ptn' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Narrow';
+}
+
+$mainColor : teal;
+$hoverBgButton: rgb(255, 106, 106);
+$mainColorLink : cornflowerblue;
+$bgSection: rgba(245, 245, 245, 0.685);
+$colorWhite: #fff;
+$colorGray: #888;
+
+
+$mainWidth_0_480px: 90%;
+
+$mainWidth_480px: 80%;
+
+$mainWidth_650px: 95%;
+
+$mainWidth_800px: 80%;
+
+$mainWidth_1020px: 95%;
+
+$mainWidth_1200px: 80%;
+
+$mainWidthImg: 65%;
+
+
+
+$grid1: 1fr;
+$grid2: repeat(2, 1fr);
+$grid3: repeat(3, 1fr);
+$grid4: repeat(4, 1fr);
+$grid5: repeat(5, 1fr);
+
+
+
+//  ........  1
+// start of navbar
+.navbar {
+    width: 100%;
+    @include grid ($grid3);
+    justify-content: space-between;
+    background-color: $colorWhite;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.034);
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+
+    .logo {
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+
+        p {
+            margin-left: 10px;
+            font-weight: bolder;
+        }
+
+        i {
+            color: $mainColor;
+        }
+    }
+
+    .content {
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        li {
+            margin-left: 40px;
+
+            a {
+                @include link($colorGray, 10px);
+
+                &:hover {
+                    @include hoverA;
+                }
+            }
+
+            i {
+                font-size: 12px;
+                color: $colorGray;
+            }
+        }
+    }
+
+    .start {
+        display: flex;
+        justify-content: center;
+
+        i {
+            display: none;
+            font-size: 25px;
+        }
+
+        .sign {
+            margin-right: 20px;
+
+            a {
+                @include link($colorGray, 10px);
+
+                &:hover {
+                    @include hoverA;
+                }
+            }
+        }
+
+        .started {
+            a {
+                @include button($mainColor, 10px 30px);
+
+                &:hover {
+                    @include hover($hoverBgButton);
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+//..........  2
+// start of header
+.header {
+    width: 100%;
+
+    .hed {
+        width: 92%;
+        margin: auto;
+        @include grid ($grid2);
+        justify-content: space-between;
+
+        .hed_left {
+            padding: 5%;
+            margin-top: 15vh; //+/+/+/+/+/+/+
+
+            h1 {
+                font-size: 45px;
+                margin: 20px;
+            }
+
+            p {
+                margin: 20px;
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            form {
+                width: 100%;
+                margin: 20px;
+
+                input {
+                    @include input;
+                }
+
+
+
+                a {
+                    @include button($mainColor, 15px 25px);
+
+                    &:hover {
+                        @include hover($hoverBgButton);
+                    }
+                }
+
+
+            }
+
+
+
+            .query {
+                font-size: 15px;
+
+                a {
+                    @include link($mainColorLink, 10px);
+
+                    &:hover {
+                        @include hoverA;
+                    }
+                }
+            }
+        }
+
+        .hed_right {
+            position: absolute;
+            left: 50%;
+
+            img {
+                margin-top: 20vh;
+                width: 90%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+//..........  3
+// start of product_features
+.product_features {
+    background-color: rgba(95, 158, 160, 0.178);
+    width: 100%;
+    padding: 5% 0;
+    margin-top: 15vh; //+/+/+/++/+/+/+/+
+
+    h2 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .product {
+        width: 80%;
+        margin: 3% auto;
+        @include grid($grid3);
+        column-gap: 2%;
+
+        a {
+            @include link($mainColorLink, 0px);
+
+            i {
+                margin: 8px;
+                font-size: 10px;
+            }
+
+            &:hover {
+                @include hoverA;
+            }
+        }
+
+        p {
+            @include p;
+        }
+
+        h3 {
+            margin: 15px 0;
+        }
+
+        .div_product {
+            @include product;
+
+            >i {
+                @include i;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+//..........  4
+// start of response
+.response {
+    width: 100%;
+    padding: 5% 0;
+
+    .resp {
+        margin: auto;
+        width: 80%;
+        @include grid ($grid2);
+
+        .img_chat {
+            width: 50%;
+        }
+
+        .chat {
+            .chat1 {
+                width: 65%;
+                margin-top: 25%;
+
+                h2 {
+                    font-size: 35px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    line-height: 25px;
+                    font-size: 19px;
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    @include link($mainColorLink, 0px);
+
+                    i {
+                        margin: 8px;
+                        font-size: 10px;
+                    }
+
+                    &:hover {
+                        @include hoverA;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//..........  5
+// start of never
+.never {
+    padding: 0 5% 0;
+    background-color: $bgSection;
+    border-bottom-right-radius: 40%;
+
+    .never1 {
+        margin: auto;
+        width: 80%;
+        @include grid ($grid2);
+
+        .img_chat1 {
+            padding: 30px;
+            position: absolute;
+            left: 45%;
+
+            img {
+                width: 85%;
+            }
+        }
+
+        .chat2 {
+            .chat3 {
+                width: 65%;
+                margin-top: 9%;
+
+                h2 {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    line-height: 25px;
+                    margin-bottom: 20px;
+                }
+
+                h4 {
+                    margin: 10px 0;
+
+                    i {
+                        @include link($mainColorLink, 20px 10px 0 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+//..........  6
+// start of customer_support
+.customer_support {
+    width: 100%;
+    padding: 5% 0;
+
+    .support {
+        margin: auto;
+        width: 80%;
+        @include grid ($grid2);
+
+        .customer {
+
+            .cus {
+                width: 65%;
+                margin-top: 5%;
+
+                h2 {
+                    font-size: 35px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    line-height: 25px;
+                    font-size: 19px;
+                    margin-bottom: 20px;
+
+                }
+
+                border-bottom: 2px solid rgba(0, 0, 0, 0.050);
+            }
+
+            .cus1 {
+                width: 65%;
+                margin-top: 5%;
+                color: $colorGray;
+
+                p {
+                    font-size: 15px;
+                    line-height: 25px;
+                    margin-bottom: 9%;
+                }
+
+                a {
+                    @include button(rgb(255, 106, 106), 15px 25px);
+
+                    &:hover {
+                        @include hover($mainColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//..........  7
+// start of pricing_that_suits
+.pricing_that_suits {
+    background-color: rgba(0, 0, 0, 0.829);
+    padding-bottom: 10vh;
+
+    .bg {
+        background-color: rgb(246, 251, 255);
+        width: 100%;
+        height: 20vh;
+        border-bottom-left-radius: 100%;
+    }
+
+    .pricing {
+        text-align: center;
+        width: 40%;
+        margin: 5% auto;
+        color: $colorWhite;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            margin: 20px;
+            color: $colorGray;
+            line-height: 25px;
+        }
+
+        i {
+            margin: 10px;
+            font-size: 20px;
+
+        }
+
+        label {
+            font-weight: bolder;
+        }
+    }
+
+
+    .pric {
+        width: 80%;
+        margin: auto;
+        @include grid ($grid3);
+        column-gap: 3%;
+
+        .pric1 {
+            background-color: $colorWhite;
+            // width: 26%;
+            padding: 30px;
+            border-radius: 10px;
+
+            h6 {
+                color: $colorGray;
+                margin: 0 0 20px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                color: $colorGray;
+                margin: 20px 0;
+                line-height: 25px;
+                font-size: 18px;
+            }
+
+            h4 {
+                margin: 20px 0;
+
+                i {
+                    margin: 0 10px 0 0;
+                }
+            }
+
+            .h4-- {
+                text-decoration: line-through;
+                color: $colorGray;
+            }
+
+            .b {
+                margin-bottom: 50px
+            }
+
+            a {
+                @include button($mainColor, 15px 35px);
+
+                &:hover {
+                    @include hover($hoverBgButton);
+                }
+            }
+        }
+
+        .pr {
+            border-top: 4px solid $hoverBgButton;
+            border-start-end-radius: 0px;
+            border-start-start-radius: 0px;
+
+            h6 {
+                margin-bottom: -2px;
+            }
+
+            .pro {
+                position: relative;
+                top: -15px;
+                left: 65%;
+                font-size: 12px;
+                @include button($hoverBgButton, 8px 20px);
+                border-radius: 20px;
+
+                &:hover {
+                    @include hover($mainColor);
+                }
+            }
+        }
+    }
+
+    .check {
+        width: 50%;
+        margin: 25px auto;
+        text-align: center;
+
+        p {
+            color: $colorWhite;
+
+            a {
+                @include link($colorGray, 10px);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+//..........  8
+// start of newsletter
+.newsletter {
+    text-align: center;
+
+    .join {
+        width: 80%;
+        padding: 5%;
+        margin: 15vh auto 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.050);
+
+        .border {
+            width: 50%;
+            margin: auto;
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                line-height: 30px;
+                font-size: 19px;
+                margin: 30px 0;
+            }
+
+            form {
+                width: 100%;
+                margin: 20px 0 0 0;
+
+                input {
+                    @include input;
+                }
+
+
+
+                a {
+                    @include button($mainColor, 15px 25px);
+
+                    &:hover {
+                        @include hover($hoverBgButton);
+                    }
+                }
+            }
+
+            .qu {
+                color: $colorGray;
+                font-size: 15px;
+                margin: 1% 0 0 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+//..........  9
+// start of footer
+footer {
+    .foot {
+        width: 80%;
+        margin: 15vh auto;
+        @include grid ($grid4);
+        column-gap: 5%;
+        justify-content: space-between;
+
+        .Brief {
+            .log {
+                display: flex;
+                font-size: 20px;
+
+                i {
+                    color: $mainColor;
+                }
+
+                p {
+                    margin-left: 10px;
+                    font-weight: bolder;
+                }
+
+            }
+
+            >p {
+                line-height: 28px;
+                color: $colorGray;
+                margin: 35px 0 30px;
+            }
+
+            .social {
+                margin-top: 20px;
+
+                a {
+                    @include link(black, 0 8px 0 0);
+
+                }
+            }
+        }
+
+        .help_menu {
+
+            p {
+                font-size: 20px;
+                font-weight: bolder;
+                color: $colorGray;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 35px 0;
+
+            }
+
+            li {
+                margin: 20px 0;
+
+                a {
+                    @include link(#000, 0);
+                    font-weight: bolder;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* // responsive  */
+
+/* //////////////////////////// */
+/* // 0 --> 480 */
+@media(max-width : 480px) {
+
+    //..........  1
+    /*start of navbar  (max-width : 480px)*/
+    .navbar {
+        justify-content: space-between;
+        @include grid ($grid2);
+
+        .logo {
+            font-size: 35px;
+        }
+
+        .content,
+        .sign,
+        .started {
+            display: none;
+        }
+
+        .start {
+
+            i {
+                display: block;
+                margin-top: 6%;
+            }
+        }
+    }
+
+
+
+
+
+
+    /*start of header  (max-width : 480px)*/
+    //..........  2
+    .header {
+        padding-top: 7%;
+
+        .hed {
+            @include grid ($grid1);
+
+            .hed_right {
+                padding: 0 5%;
+                position: relative;
+                left: auto;
+
+                img {
+                    margin-top: 15vh;
+                    width: 100%;
+                }
+            }
+
+            .hed_left {
+                h1 {
+                    font-size: 35px;
+                    letter-spacing: -1px;
+                    margin: 20px 0;
+                }
+
+                p {
+                    margin: 20px 0;
+                }
+
+                form {
+                    width: 100%;
+                    margin: 20px 0;
+                    @include grid ($grid1);
+
+                    input {
+                        @include input;
+                        margin: 0 0 3%;
+                    }
+                }
+
+                .query {
+                    font-size: 14px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    //..........  3
+    /*start of product_features   (max-width : 480px)*/
+    .product_features {
+        margin-top: 5vh;
+        padding: 0 0 35% 0;
+
+        h2 {
+            margin: 0;
+        }
+
+        .product {
+            width: $mainWidth_0_480px;
+            @include grid($grid1);
+            row-gap: 4%;
+
+
+            p {
+                @include p;
+                font-size: 18px;
+            }
+
+            h3 {
+                margin: 15px 0;
+            }
+
+            .div_product {
+                @include product;
+
+                >i {
+                    @include i;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+    //..........  4
+    /*start of response   (max-width : 480px)*/
+    .response {
+        .resp {
+            width: $mainWidth_0_480px;
+            @include grid ($grid1);
+
+            .img_chat {
+                width: 100%;
+                margin-top: 5vh;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat {
+                .chat1 {
+                    width: 100%;
+                    margin-top: 20%;
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //..........  5
+    /*start of never   (max-width : 480px)*/
+    .never {
+        padding: 0;
+        .never1 {
+            margin: 5vh auto;
+            width: $mainWidth_0_480px;
+            @include grid ($grid1);
+
+            .img_chat1 {
+                padding: 0px;
+                position: relative;
+                left: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat2 {
+                .chat3 {
+                    width: $mainWidth_0_480px;
+                    margin-top: 9%;
+
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  6
+    /*start of customer_support   (max-width : 480px)*/
+    .customer_support {
+        margin: 5vh 0;
+
+        .support {
+            width: $mainWidth_0_480px;
+            @include grid ($grid1);
+
+            .img_support {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .customer {
+                text-align: center;
+
+                .cus {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 35px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        line-height: 25px;
+                        font-size: 18px;
+                        margin-bottom: 20px;
+
+                    }
+
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.050);
+                }
+
+                .cus1 {
+                    width: 100%;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //..........  7
+    /*start of pricing_that_suits   (max-width : 480px)*/
+    .pricing_that_suits {
+
+        .bg {
+            height: 12vh;
+        }
+
+        .pricing {
+            width: 100%;
+            margin: 10% auto;
+            color: $colorWhite;
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+        }
+
+        .pric {
+            width: $mainWidth_0_480px;
+            @include grid ($grid1);
+            row-gap: 2%;
+
+            .pric1 {
+                h2 {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .check {
+            width: $mainWidth_0_480px;
+            margin: 19vh auto 0;
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+
+
+    //..........  8
+    /*start of newsletter    (max-width : 480px)*/
+    .newsletter {
+        text-align: center;
+        padding: 0%;
+
+        .join {
+            width: $mainWidth_0_480px;
+            margin: 0vh auto 0;
+
+            .border {
+                width: 100%;
+                margin: auto;
+
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {
+                    line-height: 30px;
+                    font-size: 19px;
+                    margin: 30px 0;
+                }
+
+                form {
+                    margin: 20px 0;
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+
+                    input {
+                        margin: 0 0 3%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  9
+    /*start of    (max-width : 480px)*/
+    footer {
+        padding: 5% 0;
+
+        .foot {
+            width: $mainWidth_0_480px;
+            margin: 10vh auto;
+            @include grid ($grid1);
+            row-gap: 6%;
+
+            .Brief {
+                text-align: center;
+
+                .log {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 20px
+                }
+
+                .social {
+                    a {
+                        @include link(black, 0 30px 0 0);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/* //////////////////////////// */
+/* // 480 --> 650 */
+@media(min-width : 480px) {
+
+    //..........  1
+    /*start of navbar  (min-width : 480px)*/
+    .navbar {
+        @include grid ($grid2);
+        justify-content: space-between;
+
+        .logo {
+            font-size: 35px;
+        }
+
+        .content,
+        .sign,
+        .started {
+            display: none;
+        }
+
+        .start {
+
+            i {
+                display: block;
+                margin-top: 3%;
+            }
+        }
+    }
+
+
+
+
+
+
+    /*start of header  (min-width : 480px)*/
+    //..........  2
+    .header {
+        padding-top: 7%;
+
+        .hed {
+            width: $mainWidth_480px;
+            @include grid ($grid1);
+
+            .hed_right {
+                padding: 0 5%;
+                position: relative;
+                left: auto;
+
+                img {
+                    margin-top: 15vh;
+                    width: 100%;
+                }
+            }
+
+            .hed_left {
+                text-align: center;
+
+                h1 {
+                    font-size: 35px;
+                    letter-spacing: -1px;
+                    margin: 20px 0;
+                }
+
+                p {
+                    margin: 20px 0;
+                }
+
+                form {
+                    width: 100%;
+                    margin: 20px 0;
+                    @include grid ($grid1);
+
+                    input {
+                        @include input;
+                        margin: 0 0 3%;
+                    }
+                }
+
+                .query {
+                    font-size: 14px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    //..........  3
+    /*start of product_features   (min-width : 480px)*/
+    .product_features {
+        margin-top: 5vh;
+        padding: 5% 0 20% 0;
+
+        h2 {
+            margin: 10% 0;
+        }
+
+        .product {
+            width: $mainWidth_480px;
+            @include grid($grid1);
+            row-gap: 4%;
+
+
+            p {
+                @include p;
+                font-size: 18px;
+            }
+
+            h3 {
+                margin: 15px 0;
+            }
+
+            .div_product {
+                @include product;
+
+                >i {
+                    @include i;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+    //..........  4
+    /*start of response   (min-width : 480px)*/
+    .response {
+        .resp {
+            width: $mainWidth_480px;
+            @include grid ($grid1);
+
+            .img_chat {
+                width: 100%;
+                margin-top: 5vh;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat {
+                text-align: center;
+
+                .chat1 {
+                    width: 100%;
+                    margin-top: 20%;
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //..........  5
+    /*start of never   (min-width : 480px)*/
+    .never {
+        padding: 0;
+
+        .never1 {
+            margin: 5vh auto;
+            width: $mainWidth_480px;
+            @include grid ($grid1);
+
+            .img_chat1 {
+                padding: 0px;
+                position: relative;
+                left: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat2 {
+                .chat3 {
+                    width: 100%;
+                    margin-top: 9%;
+
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  6
+    /*start of customer_support   (min-width : 480px)*/
+    .customer_support {
+        margin: 5vh 0;
+
+        .support {
+            width: $mainWidth_480px;
+            @include grid ($grid1);
+            text-align: center;
+
+            .img_support {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .customer {
+                .cus {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 35px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        line-height: 25px;
+                        font-size: 19px;
+                        margin-bottom: 20px;
+
+                    }
+
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.050);
+                }
+
+                .cus1 {
+                    width: 100%;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //..........  7
+    /*start of pricing_that_suits   (min-width : 480px)*/
+    .pricing_that_suits {
+        .bg {
+            height: 12vh;
+        }
+
+        .pricing {
+            width: $mainWidth_480px;
+            width: 100%;
+            margin: 10% auto;
+            color: $colorWhite;
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+        }
+
+        .pric {
+            width: $mainWidth_480px;
+            @include grid ($grid1);
+            row-gap: 2%;
+
+            .pric1 {
+                h2 {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .check {
+            width: $mainWidth_480px;
+            margin: 19vh auto 0;
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+
+
+    //..........  8
+    /*start of newsletter    (min-width : 480px)*/
+    .newsletter {
+        text-align: center;
+        padding: 0%;
+
+        .join {
+            width: $mainWidth_480px;
+            margin: 0vh auto 0;
+
+            .border {
+                width: 100%;
+                margin: auto;
+
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {
+                    line-height: 30px;
+                    font-size: 19px;
+                    margin: 30px 0;
+                }
+
+                form {
+                    margin: 20px 0;
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+
+                    input {
+                        margin: 0 0 3%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  9
+    /*start of footer   (min-width : 480px)*/
+    footer {
+        padding: 5% 0;
+
+        .foot {
+            width: $mainWidth_480px;
+            margin: 10vh auto;
+            @include grid ($grid1);
+            row-gap: 6%;
+
+            .Brief {
+                text-align: center;
+
+                .log {
+                    font-size: 30px;
+
+                }
+
+                .social {
+                    a {
+                        @include link(black, 0 30px 0 0);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* //////////////////////////// */
+/* // 650 --> 831 */
+@media(min-width : 650px) {
+
+    //..........  1
+    /*start of navbar  (min-width : 650px)*/
+    .navbar {
+        justify-content: space-between;
+        @include grid ($grid2);
+
+        .logo {
+            font-size: 35px;
+        }
+
+        .content,
+        .sign,
+        .started {
+            display: none;
+        }
+
+        .start {
+
+            i {
+                display: block;
+                margin-top: 3%;
+            }
+        }
+    }
+
+
+
+
+
+
+    /*start of header  (min-width : 650px)*/
+    //..........  2
+    .header {
+        text-align: center;
+
+        .hed {
+            @include grid ($grid1);
+            width: $mainWidth_650px;
+
+            .hed_right {
+                padding: 0 5%;
+                position: relative;
+                left: auto;
+                margin: auto;
+                width: $mainWidthImg;
+
+                img {
+                    margin-top: 15vh;
+                    width: 100%;
+                }
+            }
+
+            .hed_left {
+                margin-top: 0vh;
+
+                h1 {
+                    font-size: 35px;
+                    letter-spacing: -1px;
+                    margin: 20px 0;
+                }
+
+                p {
+                    margin: 20px 0;
+                }
+
+                form {
+                    width: 100%;
+                    margin: 20px 0;
+                    @include grid ($grid1);
+
+                    input {
+                        @include input;
+                        margin: 0 0 3%;
+                    }
+                }
+
+                .query {
+                    font-size: 14px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    //..........  3
+    /*start of product_features   (min-width : 650px)*/
+    .product_features {
+        margin-top: 5vh;
+        padding: 5% 0 20% 0;
+
+        h2 {
+            margin: 10% 0;
+        }
+
+        .product {
+            width: $mainWidth_650px;
+            @include grid($grid2);
+            gap: 4%;
+
+
+            p {
+                @include p;
+            }
+
+            h3 {
+                margin: 15px 0;
+            }
+
+            .div_product {
+                @include product;
+
+                >i {
+                    @include i;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+    //..........  4
+    /*start of response   (min-width : 650px)*/
+    .response {
+        .resp {
+            width: $mainWidth_650px;
+            @include grid ($grid1);
+
+            .img_chat {
+                width: 100%;
+                margin: 5vh auto 0;
+                width: $mainWidthImg;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat {
+                .chat1 {
+                    width: 100%;
+                    margin-top: 8%;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //..........  5
+    /*start of never   (min-width : 650px)*/
+    .never {
+        padding: 0;
+
+        .never1 {
+            margin: 5vh auto;
+            width: $mainWidth_650px;
+            @include grid ($grid1);
+
+            .img_chat1 {
+                padding: 0px;
+                position: relative;
+                left: auto;
+                width: $mainWidthImg;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat2 {
+                .chat3 {
+                    width: $mainWidth_650px;
+                    margin-top: 5%;
+
+                    h2 {
+                        font-size: 40px;
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  6
+    /*start of customer_support   (min-width : 650px)*/
+    .customer_support {
+        margin: 5vh 0;
+
+        .support {
+            width: $mainWidth_650px;
+            @include grid ($grid1);
+
+            .img_support {
+                width: $mainWidthImg;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .customer {
+                .cus {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 35px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        line-height: 25px;
+                        font-size: 19px;
+                        margin-bottom: 20px;
+
+                    }
+
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.050);
+                }
+
+                .cus1 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //..........  7
+    /*start of pricing_that_suits   (min-width : 650px)*/
+    .pricing_that_suits {
+
+        .bg {
+            height: 12vh;
+        }
+
+        .pricing {
+            width: 100%;
+            margin: 10% auto;
+            color: $colorWhite;
+
+            h2 {
+                font-size: 45px;
+            }
+
+            p {
+                font-size: 25px;
+                line-height: 50px;
+            }
+
+            i {
+                font-size: 30px;
+            }
+
+            label {
+                font-size: 30px;
+            }
+
+        }
+
+        .pric {
+            width: $mainWidth_650px;
+            @include grid ($grid2);
+            row-gap: 2%;
+
+            .pric1 {
+                h6 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 55px;
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+
+                h4 {
+                    font-size: 19px;
+                }
+
+                a {
+                    font-size: 20px;
+                }
+            }
+
+            .pr {
+                .pro {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .check {
+            width: $mainWidth_650px;
+            margin: 10vh auto 0;
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+
+
+    //..........  8
+    /*start of newsletter    (min-width : 650px)*/
+    .newsletter {
+        text-align: center;
+        padding: 0%;
+
+        .join {
+            width: $mainWidth_650px;
+            margin: 0vh auto 0;
+
+            .border {
+                width: 100%;
+                margin: auto;
+
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {
+                    line-height: 30px;
+                    font-size: 19px;
+                    margin: 30px 0;
+                }
+
+                form {
+                    margin: 20px 0;
+                    @include grid ($grid1);
+
+                    input {
+                        margin: 0 0 3%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  9
+    /*start of footer   (min-width : 650px)*/
+    footer {
+        padding: 5% 0;
+
+        .foot {
+            width: $mainWidth_480px;
+            margin: 10vh auto;
+            @include grid ($grid1);
+            row-gap: 6%;
+
+            .Brief {
+                text-align: center;
+
+                p {
+                    font-size: 18px;
+                }
+
+                .log {
+                    font-size: 30px;
+
+                }
+
+                .social {
+                    a {
+                        @include link(black, 0 30px 0 0);
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+
+
+
+/* ///////////////////////////// */
+/* // 831 --> 1052 */
+@media(min-width : 831px) {
+
+    //..........  1
+    /*start of navbar  (min-width : 831px)*/
+    .navbar {
+        @include grid ($grid2);
+        justify-content: space-around;
+
+        .logo {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .start {
+
+            .sign,
+            .started {
+                display: block;
+            }
+
+            i {
+                display: none;
+                margin-top: 3%;
+            }
+        }
+    }
+
+
+
+
+
+
+    /*start of header  (min-width : 831px)*/
+    //..........  2
+    .header {
+        text-align: center;
+
+        .hed {
+            @include grid ($grid1);
+            width: $mainWidth_800px;
+
+            .hed_right {
+                width: $mainWidthImg;
+                padding: 0 5%;
+                position: relative;
+                left: auto;
+                margin: auto;
+
+                img {
+                    margin-top: 5vh;
+                    width: 100%;
+                }
+            }
+
+            .hed_left {
+                width: 75%;
+                margin: auto;
+                margin-top: 0vh;
+
+                h1 {
+                    font-size: 35px;
+                    letter-spacing: -1px;
+                    margin: 20px 0;
+                }
+
+                p {
+                    margin: 20px 0;
+                }
+
+                form {
+                    width: 100%;
+                    margin: 20px 0;
+                    @include grid ($grid1);
+
+                    input {
+                        @include input;
+                        margin: 0 0 3%;
+                    }
+                }
+
+                .query {
+                    font-size: 14px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    //..........  3
+    /*start of product_features   (min-width : 831px)*/
+    .product_features {
+        margin-top: 5vh;
+        padding: 4% 0 10% 0;
+
+        h2 {
+            margin: 5% 0;
+        }
+
+        .product {
+            width: $mainWidth_800px;
+            @include grid($grid2);
+            gap: 5%;
+
+
+            p {
+                @include p;
+            }
+
+            h3 {
+                margin: 15px 0;
+            }
+
+            .div_product {
+                @include product;
+
+                >i {
+                    @include i;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+    //..........  4
+    /*start of response   (min-width : 831px)*/
+    .response {
+        .resp {
+            width: $mainWidth_800px;
+            @include grid ($grid1);
+
+            .img_chat {
+                width: 100%;
+                margin: 5vh auto 0;
+                width: $mainWidthImg;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat {
+                .chat1 {
+                    width: 80%;
+                    margin: 8% auto 0;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //..........  5
+    /*start of never   (min-width : 831px)*/
+    .never {
+        padding: 0;
+
+        .never1 {
+            margin: 5vh auto;
+            width: $mainWidth_650px;
+            @include grid ($grid1);
+
+            .img_chat1 {
+                padding: 0px;
+                position: relative;
+                left: auto;
+                width: $mainWidthImg;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat2 {
+                .chat3 {
+                    width: 85%;
+                    margin-top: 3%;
+
+                    h2 {
+                        font-size: 40px;
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  6
+    /*start of customer_support   (min-width : 831px)*/
+    .customer_support {
+        margin: 5vh 0;
+
+        .support {
+            width: $mainWidth_800px;
+            @include grid ($grid1);
+
+            .img_support {
+                width: $mainWidthImg;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .customer {
+                .cus {
+                    width: 80%;
+                    margin: auto;
+
+                    h2 {
+                        font-size: 35px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        line-height: 25px;
+                        font-size: 19px;
+                        margin-bottom: 20px;
+
+                    }
+
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.050);
+                }
+
+                .cus1 {
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //..........  7
+    /*start of pricing_that_suits   (min-width : 831px)*/
+    .pricing_that_suits {
+        .bg {
+            height: 12vh;
+        }
+
+        .pricing {
+            width: 100%;
+            margin: 10% auto;
+            color: $colorWhite;
+
+            h2 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 50px;
+            }
+
+            i {
+                font-size: 25px;
+            }
+
+            label {
+                font-size: 25px;
+            }
+
+        }
+
+        .pric {
+            width: $mainWidth_800px;
+            @include grid ($grid2);
+            column-gap: 4%;
+            row-gap: 2%;
+
+            .pric1 {
+                h6 {
+                    font-size: 16px;
+                }
+
+                h2 {
+                    font-size: 45px;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+
+                h4 {
+                    font-size: 17px;
+                }
+
+                a {
+                    font-size: 16px;
+                }
+            }
+
+            .pr {
+                .pro {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .check {
+            width: $mainWidth_800px;
+            margin: 10vh auto 0;
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+
+
+    //..........  8
+    /*start of newsletter    (min-width : 831px)*/
+    .newsletter {
+        text-align: center;
+        padding: 0%;
+
+        .join {
+            width: 60%;
+            padding: 5% 0;
+        }
+    }
+
+
+
+
+
+
+
+    //..........  9
+    /*start of footer   (min-width : 831px)*/
+    footer {
+        .foot {
+            @include grid ($grid4);
+            column-gap: 3%;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+/* ///////////////////////////// */
+/* // 1052 --> 1200 */
+@media(min-width : 1052px) {
+
+    //..........  1
+    /*start of navbar  (min-width : 1052px)*/
+    .navbar {
+        @include grid ($grid3);
+        .content {
+            display: block;
+
+            ul {
+                justify-content: center;
+
+                li {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    /*start of header  (min-width : 1052px)*/
+    //..........  2
+    .header {
+        .hed {
+            @include grid ($grid2);
+            width: $mainWidth_1020px;
+
+            .hed_right {
+                width: 40%;
+                padding: 0;
+                position: absolute;
+                left: 55%;
+                margin: 5vh 0;
+                img {
+                    margin-top: 0vh;
+                    width: 100%;
+                }
+            }
+            
+            .hed_left {
+                margin: 3vh 0;
+                text-align: start;
+                form{
+                    width: 100%;
+                    margin: auto;
+                    @include grid ($grid3);
+                    gap: 1%;
+                    input{
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                        margin: 0;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    //..........  3
+    /*start of product_features   (min-width : 1052px)*/
+    .product_features {
+        padding: 4% 0 6% 0;
+        .product {
+            width: $mainWidth_1020px;
+            @include grid($grid3);
+            gap: 2%;
+        }
+
+    }
+
+
+
+
+
+
+
+    //..........  4
+    /*start of response   (min-width : 1052px)*/
+    .response {
+        .resp {
+            width: $mainWidth_1020px;
+            @include grid ($grid2);
+
+            .img_chat {
+                width: 100%;
+                margin: 5vh auto 0;
+                width: 80%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat {
+                text-align: start;
+                .chat1 {
+                    width: 80%;
+                    margin: 25% auto 0;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //..........  5
+    /*start of never   (min-width : 1052px)*/
+    .never {
+        padding: 4% 0;
+        .never1 {
+            margin:  5vh auto;
+            width: $mainWidth_1020px;
+            @include grid ($grid2);
+
+            .img_chat1 {
+                padding: 0px;
+                position: absolute;
+                left: 50%;
+                width: 35%;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .chat2 {
+                .chat3 {
+                    text-align: start;
+                    width: 80%;
+                    margin: 0%;
+
+                    h2 {
+                        font-size: 40px;
+                        text-align: start;
+                    }
+
+                    p {
+                        text-align: start;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  6
+    /*start of customer_support   (min-width : 1052px)*/
+    .customer_support {
+        .support {
+            width: $mainWidth_1020px;
+            @include grid ($grid2);
+            .img_support {
+                width: 80%;
+            }
+            .customer {
+                .cus {
+                    text-align: start;
+                    width: 70%;
+                }
+                .cus1 {
+                    text-align: start;
+                    width: 70%;
+                    p{
+                        margin-top: 5%;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //..........  7
+    /*start of pricing_that_suits   (min-width : 1052px)*/
+    .pricing_that_suits {
+        .bg {
+            height: 19vh;
+        }
+
+        .pricing {
+            width: 50%;
+            margin: 9% auto;
+            color: $colorWhite;
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 35px;
+            }
+
+            i {
+                font-size: 22px;
+            }
+
+            label {
+                font-size: 18px;
+            }
+
+        }
+
+        .pric {
+            width: $mainWidth_1020px;
+            @include grid ($grid3);
+            column-gap: 3%;
+            .pr {
+                .pro {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+    //..........  8
+    /*start of newsletter    (min-width : 1052px)*/
+    .newsletter {
+        .join {
+            width: 50%;
+            .border{
+                p{
+                    font-size: 18px;
+                }
+                form{
+                    width: 70%;
+                    margin: auto;
+                    justify-content: space-between;
+                    @include grid ($grid3);
+                    gap: 1%;
+                    input{
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  9
+    /*start of footer   (min-width : 1052px)*/
+    footer {
+        .foot {
+            width: $mainWidth_1020px;
+            @include grid ($grid5);
+            column-gap: 5%;
+            .Brief{
+                text-align: start;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                .log{
+                    i,p{
+                        font-size: 30px;
+                    }
+                }
+                .social{
+                    text-align: start;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+/* ///////////////////////////// */
+/* // 1200 --> ~~~ */
+@media(min-width : 1200px) {
+
+        //..........  1
+    /*start of navbar  (min-width : 1052px)*/
+    .navbar {
+        .logo {
+            font-size: 30px;
+        }
+        .content {
+                li {
+                    margin-left: 33px;
+                }
+        }
+    }
+
+
+
+
+
+
+    /*start of header  (min-width : 1052px)*/
+    //..........  2
+    .header {
+        .hed {
+            width: $mainWidth_1200px;
+            .hed_right {
+                width: 40%;
+            }
+            .hed_left {
+                width: 85%;
+                margin: 9vh 0;
+                text-align: start;
+                h1{
+                    font-size: 45px;
+                }
+                .query{
+                    margin-top: 3%;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    //..........  3
+    /*start of product_features   (min-width : 1052px)*/
+    .product_features {
+        padding: 4% 0 6% 0;
+        h2{
+            font-size: 45px;
+        }
+        .product {
+            width: $mainWidth_1200px;
+            
+                i{
+                    font-size: 30px;
+                }
+                h3{
+                    font-size: 25px;
+                    margin: 8% 0;
+                }
+                p{
+                    font-size: 20px;
+
+                }
+            
+            .div_product {
+                >i {
+                    @include i;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+    //..........  4
+    /*start of response   (min-width : 1052px)*/
+    .response {
+        .resp {
+            width: $mainWidth_1200px;
+            .chat {
+                .chat1 {
+                    h2{
+                        font-size: 45px;
+                    }
+                    p{
+                    margin: 8% 0;
+                    line-height: 35px;
+                    font-size: 23px;
+                }
+                a{
+                    font-size: 23px;
+                    i{
+                        font-size: 16px;
+                    }
+                }
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //..........  5
+    /*start of never   (min-width : 1052px)*/
+    .never {
+        .never1 {
+            margin:  5vh auto;
+            width: $mainWidth_1200px;
+            .img_chat1{
+                width: 30%;
+            }
+            .chat2 {
+                .chat3 {
+                    h2 {
+                        font-size: 45px;
+                    }
+                    h4{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  6
+    /*start of customer_support   (min-width : 1052px)*/
+    .customer_support {
+        .support {
+            width: $mainWidth_1200px;
+            .customer {
+                .cus {
+                    width: 70%;
+                    h2{
+                        font-size: 40px;
+                    }
+                }
+                .cus1 {
+                    width: 70%;
+                    p{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //..........  7
+    /*start of pricing_that_suits   (min-width : 1052px)*/
+    .pricing_that_suits {
+        .pricing {
+            width: 50%;
+            h2 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .pric {
+            width: $mainWidth_1200px;
+            
+        }
+    }
+
+
+
+
+
+
+
+
+    //..........  8
+    /*start of newsletter    (min-width : 1052px)*/
+    .newsletter {
+        .join {
+            .border{
+                h2{
+                    font-size: 40px;
+                }
+                p{
+                    font-size: 22px;
+                    line-height: 40px;
+                }
+                .qu{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //..........  9
+    /*start of footer   (min-width : 1052px)*/
+    footer {
+        .foot {
+            width: $mainWidth_1200px;
+            .Brief{
+                .log{
+                    i,p{
+                        font-size: 35px;
+                    }
+                }
+                .social{
+                    font-size: 20px;
+                }
+            }
+            .help_menu{
+                li{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+
+}
+

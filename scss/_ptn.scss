@@ -1,0 +1,68 @@
+@mixin link($color, $mrg) {
+    text-decoration: none;
+    color: $color;
+    margin: $mrg;
+    padding-bottom: 8px;
+}
+
+//link
+@mixin hoverA {
+    color: aqua;
+    border-bottom: 2px solid;
+}
+
+
+@mixin button($bgCol, $pad) {
+    background-color: $bgCol;
+    padding: $pad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+//button
+@mixin hover($bgColor) {
+    color: #fff;
+    background-color: $bgColor;
+}
+
+@mixin input {
+    background-color: rgba(0, 255, 255, 0.082);
+    // width: 40%;
+    padding: 15px 25px;
+    outline: none;
+    border: none;
+}
+
+
+// product_features
+@mixin product {
+    line-height: 25px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+
+
+// icon --> product_features
+@mixin i {
+    background-color: rgba(255, 0, 0, 0.192);
+    color: rgba(255, 0, 0, 0.534);
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+// p --> product_features
+@mixin p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+@mixin grid($repeat) {
+    display: grid;
+    grid-template-columns: $repeat;
+}
